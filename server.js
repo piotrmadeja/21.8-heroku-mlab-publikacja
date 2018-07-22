@@ -1,6 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+PORT = process.env.PORT || 8000,
+express = require('express'),
+app = express();
+
+app.get('/', (req, res) => res.send('blblblblbl'));
+
+app.listen(PORT, () => console.log('App listening on port 5000!'));
+
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://pmadeja:Rebcia1988!@ds247171.mlab.com:47171/databejs', {
 });
